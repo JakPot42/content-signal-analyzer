@@ -1,10 +1,10 @@
-# content_signal_analyzer — Synthetic Content Signal Analyzer (P69)
+# Synthetic Content Signal Analyzer
 
 ## Scope — the framing discipline matters more than the code
 
 "Dead Internet Theory" (most internet content is now bot/AI-generated) is
-**unverifiable at scale from public data alone** — the same overclaiming
-trap as this portfolio's rejected "predict SCOTUS outcomes" feature. This
+**unverifiable at scale from public data alone** — claiming a precise
+bot percentage from public signals is overclaiming. This
 tool never estimates what fraction of an account or dataset is synthetic,
 and never claims to detect a bot.
 
