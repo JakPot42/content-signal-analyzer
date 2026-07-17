@@ -17,7 +17,7 @@ deterministic `DEMO_MODE` template — is run through `framing_guard.
 assert_clean()` before it is ever shown. A report that violates the
 framing raises an error; it is never silently displayed. This is the
 same "enforce it structurally, don't just prompt nicely and hope" lesson
-as P37's citation verifier and P38's force-appended legal disclaimer.
+applied elsewhere in this portfolio.
 
 ```
 py cli.py demo                                    # both demo datasets, side by side
@@ -32,15 +32,15 @@ py cli.py indicators                                # the 5 indicators + citatio
 ## The 5 indicators, each with a real citation
 
 1. **Template repetition rate** — adapted from the BM25/IDF machinery
-   already used in P22 (civic_rag) and P41 (portfolio_rag). Not literal
+   already used in civic_rag and portfolio_rag. Not literal
    BM25: BM25 is an asymmetric ranking function (query vs. corpus), not a
-   normalized pairwise similarity metric, so this reuses P22/P41's exact
+   normalized pairwise similarity metric, so this reuses their exact
    tokenizer and IDF-weighting formula, repackaged as symmetric,
    [0,1]-bounded IDF-weighted cosine similarity between two specific
    posts — the minimal adaptation a near-duplicate check actually needs.
    Cites Meta's Adversarial Threat Report (Aug 2022/Mar 2023/Aug 2023)
    and Google/Mandiant's Dragonbridge analysis (Aug 2022) — the same real
-   sources already verified in this portfolio's P68.
+   sources already verified elsewhere in this portfolio.
 2. **Posting velocity distribution** — coefficient of variation of
    inter-post intervals, plus longest sleep-consistent quiet window in a
    24-hour histogram. Cites Barabási (2005), *"The origin of bursts and
@@ -52,8 +52,8 @@ py cli.py indicators                                # the 5 indicators + citatio
 3. **Cross-account coordination signal** — reuses indicator 1's
    similarity engine, restricted to pairs from *different* accounts
    within the same real, already-verified 30-minute window this
-   portfolio's P68 established from the same Meta ATR/Dragonbridge
-   methodology.
+   portfolio's Dragonbridge Analyzer established from the same Meta ATR/
+   Dragonbridge methodology.
 4. **Engagement-to-follower ratio anomaly** — cites the New York Times'
    *"The Follower Factory"* (Jan 27, 2018) and Cresci et al.'s
    fake-follower detection research, which use engagement/follower ratio
@@ -79,7 +79,7 @@ produce.
 against real public accounts and publishing the result, even with
 disclaimers, risks being read as accusing specific real people, which is
 exactly the kind of overclaiming this build's framing discipline exists
-to avoid (same reasoning P30/P38/P70 applied to their own synthetic data).
+to avoid (the same reasoning applied to synthetic data elsewhere in this portfolio).
 `analyze file` accepts any dataset matching `models.py`'s schema, so a
 user can point it at their own real, ethically-sourced data if they
 choose to — this project just doesn't ship one.
